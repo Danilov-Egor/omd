@@ -49,14 +49,6 @@ Got:
 
 
 
-C:\Users\mrhum\Desktop\AAA\python\testing>python -m doctest -o NORMALIZE_WHITESPACE -v test_morse.py
-2 items had no tests:
-    test_morse
-    test_morse.test_decode
-0 tests in 2 items.
-0 passed and 0 failed.
-Test passed.
-
 >>>python -m pytest -v test_morse.py
 ================================================= test session starts =================================================
 platform win32 -- Python 3.9.13, pytest-7.2.0, pluggy-1.0.0 -- C:\Users\mrhum\AppData\Local\Programs\Python\Python39\python.exe
@@ -71,7 +63,6 @@ test_morse.py::test_decode[-] PASSED                                            
 test_morse.py::test_decode[-..-. ..--.. ..--..-/??] PASSED                                                       [100%]
 
 ================================================== 4 passed in 0.08s ==================================================
-
 
 
 
@@ -97,4 +88,3 @@ test_one_hot_encoder_pytest.py::test_one_hot_encode_in[arg20-sub_in0] PASSED    
 test_one_hot_encoder_pytest.py::test_one_hot_encode_in[arg21-sub_in1] PASSED                                     [100%]
 
 ================================================== 4 passed in 0.09s ==================================================
-
