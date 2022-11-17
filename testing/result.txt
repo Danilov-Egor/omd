@@ -1,0 +1,100 @@
+>>>python -m doctest -o NORMALIZE_WHITESPACE -v morse.py > result.txt
+
+Trying:
+    encode('CAT IS CHASING A MOUSE')
+Expecting:
+    '-.-. .- -   .. ...   -.-. .... .- ... .. -. --.   .-   -- --- ..- ... .'
+ok
+Trying:
+    encode('SOS')
+Expecting:
+    '... --- ...'
+ok
+Trying:
+    encode('')
+Expecting:
+    ''
+ok
+Trying:
+    encode('/ ??')
+Expecting:
+    '-..-.   ..--.. ..--..'
+ok
+Trying:
+    encode('AN ELEPHANT SAW A MOUSE AND WAS SCARED TO DEATH') # doctest: +ELLIPSIS
+Expecting:
+    '.- -.   . .-.. . ... -....'
+ok
+Trying:
+    encode('V') # exception
+Expecting:
+    '--.--'
+**********************************************************************
+File "C:\Users\mrhum\Desktop\AAA\python\testing\morse.py", line 47, in morse.encode
+Failed example:
+    encode('V') # exception
+Expected:
+    '--.--'
+Got:
+    '...-'
+2 items had no tests:
+    morse
+    morse.decode
+**********************************************************************
+1 items had failures:
+   1 of   6 in morse.encode
+6 tests in 3 items.
+5 passed and 1 failed.
+***Test Failed*** 1 failures.
+
+
+
+C:\Users\mrhum\Desktop\AAA\python\testing>python -m doctest -o NORMALIZE_WHITESPACE -v test_morse.py
+2 items had no tests:
+    test_morse
+    test_morse.test_decode
+0 tests in 2 items.
+0 passed and 0 failed.
+Test passed.
+
+>>>python -m pytest -v test_morse.py
+================================================= test session starts =================================================
+platform win32 -- Python 3.9.13, pytest-7.2.0, pluggy-1.0.0 -- C:\Users\mrhum\AppData\Local\Programs\Python\Python39\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\mrhum\Desktop\AAA\python\testing
+plugins: anyio-3.6.1
+collected 4 items
+
+test_morse.py::test_decode[-- --- ..- ... .-MOUSE] PASSED                                                        [ 25%]
+test_morse.py::test_decode[... --- ...-SOS] PASSED                                                               [ 50%]
+test_morse.py::test_decode[-] PASSED                                                                             [ 75%]
+test_morse.py::test_decode[-..-. ..--.. ..--..-/??] PASSED                                                       [100%]
+
+================================================== 4 passed in 0.08s ==================================================
+
+
+
+
+>>>python -m unittest test_one_hot_encoder.py
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK
+
+
+>>>python -m pytest -v test_one_hot_encoder_pytest.py
+================================================= test session starts =================================================
+platform win32 -- Python 3.9.13, pytest-7.2.0, pluggy-1.0.0 -- C:\Users\mrhum\AppData\Local\Programs\Python\Python39\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\mrhum\Desktop\AAA\python\testing
+plugins: anyio-3.6.1
+collected 4 items
+
+test_one_hot_encoder_pytest.py::test_one_hot_encode_eql[arg10-result0] PASSED                                    [ 25%]
+test_one_hot_encoder_pytest.py::test_one_hot_encode_eql[arg11-result1] PASSED                                    [ 50%]
+test_one_hot_encoder_pytest.py::test_one_hot_encode_in[arg20-sub_in0] PASSED                                     [ 75%]
+test_one_hot_encoder_pytest.py::test_one_hot_encode_in[arg21-sub_in1] PASSED                                     [100%]
+
+================================================== 4 passed in 0.09s ==================================================
+
