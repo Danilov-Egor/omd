@@ -1,2 +1,3 @@
-what_is_year_now
-python -m unittest test_what_is_year_now.py
+what_is_year_now  
+> python -m coverage run -m unittest  
+> python -m coverage report
